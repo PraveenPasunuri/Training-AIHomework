@@ -1,7 +1,16 @@
 version: "3.9"
 services:
     pingservice:
-        image: flask-app:latest
-        build: .
+        
+        build: 
+            context: .
+            dockerfile: ./pingservice/Dockerfile-ping
         ports:
             - 8080:8080            
+    receiverservice:
+        
+        build: 
+            context: .
+            dockerfile: ./receiverservice/Dockerfile-receiver
+        ports:
+            - 8081:8080            
