@@ -26,7 +26,7 @@ def is_valid_url(url):
             r'(?:/?|[/?]\S+)$', re.IGNORECASE)
     return re.match(regex, url) is not None
     
-
+# Post api that pings any rest api url and returns json output
 @api.route('/api/v1/ping', methods=['POST'])
 class Ping(Resource):
     @api.expect(ping_params)
@@ -48,13 +48,13 @@ class Ping(Resource):
         return {'url_received': url, 'status': status,
                 'response': response_data}
 
-
+# Get api that returns json output {"Receiver": "Cisco is the best!"}
 @api.route('/api/v1/info', methods=['GET'])
 class InfoCheck(Resource):
     def get(self):
         return { "Receiver": "Cisco is the best!" }
 
-
+# Get api that checks docker health status
 @api.route('/health', methods=['GET'])
 class Health(Resource):
     def get(self):

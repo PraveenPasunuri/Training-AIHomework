@@ -5,17 +5,22 @@
   It exposes 2 APIs one for ping request and another for health
   Below are the snaps for Ping Service:-
 
-  ![Ping URL snap](https://user-images.githubusercontent.com/71802799/118128682-dcb50e00-b418-11eb-9584-59dcb8bbeb2e.png)
+  ![img_3.png](img_3.png)
 
-  ![Ping URL Response snap](https://user-images.githubusercontent.com/71802799/118128679-daeb4a80-b418-11eb-974c-36a4d7f0d1cf.png)
-
+  ![img_4.png](img_4.png)
 
  ## 2. ReceiverService
   Receiver Service only exposes hardcode ```/info``` api.
 
-![image](https://user-images.githubusercontent.com/71802799/118128960-30bff280-b419-11eb-9c00-7897c3cd733e.png)
+  ![img_5.png](img_5.png)
+
+ ## 3. Health
+  Checks docker health status
+
+  ![img_6.png](img_6.png)
+
 
 To run the app:
 -git clone repo
 -docker-compose up --build
--open the browser and hit the url http://localhost:8080/ you will swagger documentation.
+-open the browser and hit the url http://localhost:8080/ and you will see swagger documentation.
